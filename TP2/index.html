@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cuatro en linea</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/estilo.css">
+		<link rel="stylesheet" href="css/alertify.min.css">
+		<link rel="stylesheet" href="css/themes/default.min.css">
+	</head>
+	<body>
+		<div id="juego">
+			<div class="row">
+				<div class="col-md-offset-2 col-md-2">
+					<div id="jugador1" class="alert alert-info" role="alert"></div>
+					<span class="badge"> FICHAS RESTANTES: <span id="fichasj1"></span></span>
+				</div>
+				<div class="col-md-4">
+					<div id="turno" class="alert alert-success" role="alert"></div>
+				</div>
+				<div class="col-md-2">
+					<div id="jugador2" class="alert alert-info" role="alert"></div>
+					<span class="badge"> FICHAS RESTANTES: <span id="fichasj2"></span></span>
+				</div>
+			</div>
+			<div class="row">
+				<canvas id="canvas" height="500" width="900"/>
+			</div>
+		</div>
+		<div id="menu">
+			<div class="row">
+				<div class="col-md-offset-4 col-md-4">
+						<button id="play" type="button" class="btn btn-primary">INICIAR JUEGO</button>
+						<div class="input-group">
+						  <span class="input-group-addon" id="j1label">JUGADOR 1</span>
+						  <input id="j1nombre" type="text" class="form-control" placeholder="NOMBRE JUGADOR" aria-describedby="basic-addon1">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon" id="j2label">JUGADOR 2</span>
+							<input id="j2nombre" type="text" class="form-control" placeholder="NOMBRE JUGADOR" aria-describedby="basic-addon1">
+						</div>
+						<div id="error" class="alert alert-danger" role="alert"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Alertify -->
+	<script type="text/javascript" src="js/alertify.min.js"></script>
+	<!-- scripts del juego -->
+	<script type="text/javascript" src="js/ficha.js"></script>
+	<script type="text/javascript" src="js/jugador.js"></script>
+	<script type="text/javascript" src="js/tablero.js"></script>
+	<script type="text/javascript" src="js/juego.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</html>

@@ -1,0 +1,14 @@
+#canvas{
+  border: 1px solid black;
+  cursor: url("../images/lapiz.png"),default;
+  background-color: white;
+}
+body{
+  background-color: #e4e4e4;
+}
+.herramienta:hover{
+  border: 1px solid blue;
+}
+.activo{
+  border: 1px solid blue;
+}

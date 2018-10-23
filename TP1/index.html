@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Paint Libre</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/estilo.css">
+		<link rel="stylesheet" href="css/alertify.min.css">
+		<link rel="stylesheet" href="css/themes/default.min.css">
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-md-offset-3 col-md-6">
+				<img class="herramienta activo" id="lapiz" src="images/lapiz.png" alt="">
+				<img class="herramienta" id="goma" src="images/goma.png" alt="">
+				<img class="herramienta" id="tacho" src="images/tacho.png" alt="">
+				<img class="herramienta" id="deshacer" src="images/deshacer.png" alt="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-2">
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Grosor <span id="textogrosor"></span></label>
+			    <input type="number" class="form-control" id="grosor" placeholder="1" min="1">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword1">Color Lapiz</label>
+					<select id="color" name="" class="form-control">
+						<option value="0,0,0" selected style="background-color:black; color:white;">Negro</option>
+						<option value="255,255,255"style="color:black">Blanco</option>
+						<option value="255,0,0" style="background-color:rgb(255,0,0); color:white;">Rojo</option>
+						<option value="0,0,255" style="background-color:rgb(0,0,255); color:white;">Azul</option>
+						<option value="0,255,0" style="background-color:rgb(0,255,0); color:white;">Verde</option>
+						<option value="255,255,0" style="background-color:rgb(255,255,0); color:black;">Amarillo</option>
+						<option value="255,155,0" style="background-color:rgb(255,155,0); color:black;">Naranja</option>
+					</select>
+			  </div>
+				<div class="form-group">
+					<label for="sliderconstraste">Constraste</label>
+					<input type="number" class="form-control" id="valorContraste" value="0" min="-255" max="255">
+					<p></p>
+					<button id="contraste" class="btn btn-success">Aplicar</button>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Cargar Imagen</label>
+					<input type="file" id="cargar"/>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Descargar Imagen</label>
+					<button class="form-control btn btn-success" id="descargar">DESCARGAR</button>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<canvas id="canvas" width="600" height="400"/>
+			</div>
+			<div class="col-md-3">
+				<img class="herramienta" id="sepia" src="images/sepia.png" alt="">
+				<img class="herramienta" id="byn" src="images/byn.png" alt="">
+				<img class="herramienta" id="negativo" src="images/negativo.png" alt="">
+			</div>
+		</div>
+	</body>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Alertify -->
+	<script type="text/javascript" src="js/alertify.min.js"></script>
+	<!-- Paint funciones -->
+	<script type="text/javascript" src="js/punto.js"></script>
+	<script type="text/javascript" src="js/paint.js"></script>
+	<script type="text/javascript" src="js/eventos.js"></script>
+</html>

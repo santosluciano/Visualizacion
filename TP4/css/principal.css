@@ -3,4 +3,25 @@ body{
 }
 #juego{
   background-color: black;
+  position: absolute;
+  width: 840px;
+  height: 100%;
+  background-image: url("../images/pista1.png");
+  background-size:auto;
+  background-repeat: repeat;
+  background-position: 0px 0px;
+}
+
+.animacion-fondo {
+    animation: parallax-background linear 1s infinite;
+}
+
+@keyframes parallax-background {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 0px 650px;
+    }
 }

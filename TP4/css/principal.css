@@ -1,6 +1,9 @@
 body{
   background-color: #2A1494;
 }
+.dashboard{
+  background-color: black;
+}
 #juego{
   background-color: black;
   position: absolute;
@@ -24,4 +27,56 @@ body{
     to {
         background-position: 0px 650px;
     }
+}
+/*auto*/
+#automovil {
+    position: absolute;
+    width: 50px;
+    height: 101px;
+    background-image: url("../images/auto.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    bottom: 30px;
+    left: 330px;
+}
+
+.izquierda {
+    animation: mover-izquierda ease-out 0.01s;
+    animation-fill-mode: forwards;
+}
+
+.derecha {
+    animation: mover-derecha ease-out 0.01s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes mover-izquierda {
+  25%{
+    transform: rotate(-5deg)
+  }
+  50%{
+    transform: rotate(-10deg)
+  }
+  75%{
+    transform: rotate(-15deg)
+  }
+  100%{
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes mover-derecha {
+  25%{
+    transform: rotate(5deg)
+  }
+  50%{
+    transform: rotate(10deg)
+  }
+  75%{
+    transform: rotate(15deg)
+  }
+  100%{
+    transform: rotate(20deg)
+  }
 }

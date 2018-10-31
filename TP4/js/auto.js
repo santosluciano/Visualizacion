@@ -21,6 +21,18 @@ function Auto(param = {}) {
         clase.add("izquierda");
     }
   }
+  Auto.prototype.ubicacion = function () {
+    let rect = this.elem.getBoundingClientRect();
+    return datos = {
+          top: rect.top,
+          bottom: rect.bottom,
+          left: rect.left,
+          right: rect.right
+    }
+  }
+  Auto.prototype.explotar = function () {
+    this.elem.classList.add("explosion");
+  }
   Auto.prototype.arriba = function () {
     this.bottom += 8;
     this.elem.style.bottom = this.bottom+"px";

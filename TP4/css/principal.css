@@ -50,6 +50,33 @@ body{
     animation-fill-mode: forwards;
 }
 
+#rival{
+  position: absolute;
+  width: 50px;
+  height: 101px;
+  background-image: url("../images/auto.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  bottom: 800px;
+  left: 330px;
+}
+
+.explosion{
+  display: none;
+}
+
+.mover-rival{
+  animation: mover-rival ease-out 5s;
+}
+
+@keyframes mover-rival {
+  from {
+    bottom: 600px;
+  }
+  to {
+    bottom: -150px;
+  }
+}
 
 @keyframes mover-izquierda {
   25%{

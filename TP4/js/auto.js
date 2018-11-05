@@ -2,9 +2,10 @@ function Auto(param = {}) {
   this.left = param.left;
   this.bottom = param.bottom;
   this.elem = document.getElementById(param.idauto);
+  this.activo = true;
 
   Auto.prototype.derecha = function () {
-    if (this.left < 645){
+    if (this.left < 645 && this.activo){
       let clase = this.elem.classList;
       this.left += 4;
       this.elem.style.left = this.left+"px";
@@ -13,7 +14,7 @@ function Auto(param = {}) {
     }
   }
   Auto.prototype.izquierda = function () {
-    if (this.left > 150){
+    if (this.left > 150 && this.activo){
       let clase = this.elem.classList;
       this.left -= 4;
       this.elem.style.left = this.left+"px";
@@ -32,14 +33,19 @@ function Auto(param = {}) {
   }
   Auto.prototype.explotar = function () {
     this.elem.classList.add("explosion");
+    this.activo = false;
   }
   Auto.prototype.arriba = function () {
-    this.bottom += 8;
-    this.elem.style.bottom = this.bottom+"px";
+    if (this.activo){
+      this.bottom += 16;
+      this.elem.style.bottom = this.bottom+"px";
+    }
   }
   Auto.prototype.abajo = function () {
-    this.bottom -= 8;
-    this.elem.style.bottom = this.bottom+"px";
+    if (this.activo){
+      this.bottom -= 16;
+      this.elem.style.bottom = this.bottom+"px";
+    }
   }
   Auto.prototype.removerClases = function () {
     let clase = this.elem.classList;

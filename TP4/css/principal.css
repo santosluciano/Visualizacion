@@ -61,8 +61,18 @@ body{
   left: 330px;
 }
 
-.explosion{
-  display: none;
+#automovil.explosion{
+  width: 90px;
+  height: 96px;
+  position: absolute;
+  background: url("../images/explosion.png") 0 0;
+  animation: explotar 1s steps(10) infinite;
+}
+
+@keyframes explotar {
+    100% {
+        background-position: -1000px 0;
+    }
 }
 
 .mover-rival{

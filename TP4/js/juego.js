@@ -8,6 +8,9 @@ function Juego(param = {}) {
   this.invervaloChequeo = null;
   this.rival = document.getElementById("rival");
   this.botonJugar = document.getElementById("jugar");
+  this.audioambiente = new Audio("audio/partida.mp3");
+  this.audioambiente.loop = true;
+  this.audioexplosion = new Audio("audio/choque.mp3");
 
   Juego.prototype.comenzar = function () {
     if (this.activo)
@@ -19,6 +22,7 @@ function Juego(param = {}) {
       this.configurarControles();
       this.setEnemigos();
       this.chequearColisiones();
+      this.audioambiente.play();
     }
   }
   Juego.prototype.setEnemigos = function () {
@@ -49,6 +53,8 @@ function Juego(param = {}) {
   Juego.prototype.juegoPerdido = function () {
     clearInterval(this.intervaloChequeo);
     clearInterval(this.intervalo);
+    this.audioexplosion.play();
+    this.audioambiente.pause();
     this.rival.removeAttribute('id');
   }
   Juego.prototype.anchoRandom = function () {
@@ -57,7 +63,11 @@ function Juego(param = {}) {
   Juego.prototype.resetear = function () {
     document.getElementById("jugar").innerHTML = "Jugar";
     this.elem.classList.remove("animacion-fondo");
+    this.audioambiente.pause();
+    this.audioambiente.currentTime = 0;
     this.activo = false;
+    clearInterval(this.intervaloChequeo);
+    clearInterval(this.intervalo);
   }
   Juego.prototype.configurarControles = function() {
     document.addEventListener("keydown", (event) => {

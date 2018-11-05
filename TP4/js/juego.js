@@ -7,12 +7,13 @@ function Juego(param = {}) {
   this.intervalo = null;
   this.invervaloChequeo = null;
   this.rival = document.getElementById("rival");
+  this.botonJugar = document.getElementById("jugar");
 
   Juego.prototype.comenzar = function () {
     if (this.activo)
       this.resetear();
     else {
-      document.getElementById("jugar").innerHTML = "Abandonar";
+      this.botonJugar.innerHTML = "Abandonar";
       this.elem.classList.add("animacion-fondo");
       this.activo = true;
       this.configurarControles();
@@ -23,13 +24,12 @@ function Juego(param = {}) {
   Juego.prototype.setEnemigos = function () {
       this.intervalo = setInterval(() => {
         this.rival.classList.toggle("mover-rival");
-        this.rival.style.left = (Math.random() * (645 - 150) + 150)+"px"; }
+        this.rival.style.left = this.anchoRandom()+"px"; }
         , 3500);
   }
   Juego.prototype.chequearColisiones = function () {
-    let pista = this.elem;
     this.intervaloChequeo = setInterval(() => {
-      let rect = rival.getBoundingClientRect();
+      let rect = this.rival.getBoundingClientRect();
       let datosrival = {
           top: rect.top,
           bottom: rect.bottom,
@@ -40,7 +40,7 @@ function Juego(param = {}) {
       if (datosrival.top < datosauto.top+100 && datosrival.top > datosauto.top-100){
         if (datosrival.right < datosauto.right+50 && datosrival.left > datosauto.left-50){
           this.auto.explotar();
-          pista.classList.remove('animacion-fondo');
+          this.elem.classList.remove('animacion-fondo');
           this.juegoPerdido();
         }
       }
@@ -60,23 +60,21 @@ function Juego(param = {}) {
     this.activo = false;
   }
   Juego.prototype.configurarControles = function() {
-    let elem = this.auto;
-    let pista = this.elem;
-    document.addEventListener("keydown", function(event){
+    document.addEventListener("keydown", (event) => {
       let tecla = event.keyCode;
       //costados
       if (tecla == 39)
-        elem.derecha();
+        this.auto.derecha();
       else if (tecla == 37)
-        elem.izquierda();
+        this.auto.izquierda();
       //arriba-abajo
       if (tecla == 38)
-        elem.arriba();
+        this.auto.arriba();
       else if (tecla == 40)
-        elem.abajo();
+        this.auto.abajo();
     });
-    document.addEventListener("keyup", function(event){
-      elem.removerClases();
+    document.addEventListener("keyup", (event) => {
+      this.auto.removerClases();
     });
   }
 }

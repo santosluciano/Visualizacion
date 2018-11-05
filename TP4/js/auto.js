@@ -7,7 +7,7 @@ function Auto(param = {}) {
   Auto.prototype.derecha = function () {
     if (this.left < 645 && this.activo){
       let clase = this.elem.classList;
-      this.left += 4;
+      this.left += 8;
       this.elem.style.left = this.left+"px";
       if (!clase.contains("derecha"))
         clase.add("derecha");
@@ -16,7 +16,7 @@ function Auto(param = {}) {
   Auto.prototype.izquierda = function () {
     if (this.left > 150 && this.activo){
       let clase = this.elem.classList;
-      this.left -= 4;
+      this.left -= 8;
       this.elem.style.left = this.left+"px";
       if (!clase.contains("izquierda"))
         clase.add("izquierda");
@@ -37,13 +37,13 @@ function Auto(param = {}) {
   }
   Auto.prototype.arriba = function () {
     if (this.activo){
-      this.bottom += 16;
+      this.bottom += 12;
       this.elem.style.bottom = this.bottom+"px";
     }
   }
   Auto.prototype.abajo = function () {
     if (this.activo){
-      this.bottom -= 16;
+      this.bottom -= 12;
       this.elem.style.bottom = this.bottom+"px";
     }
   }

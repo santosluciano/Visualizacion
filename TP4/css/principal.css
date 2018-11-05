@@ -52,9 +52,9 @@ body{
 
 #rival{
   position: absolute;
-  width: 50px;
+  width: 48px;
   height: 101px;
-  background-image: url("../images/auto.png");
+  background-image: url("../images/rival.png");
   background-size: auto;
   background-repeat: no-repeat;
   bottom: 800px;
@@ -84,7 +84,7 @@ body{
     bottom: 600px;
   }
   to {
-    bottom: -50px;
+    bottom: -80px;
   }
 }
 

@@ -2,26 +2,83 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Carrerita</title>
-
+    <title>Mundo juegos - Carrerita</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="css/principal.css">
   </head>
   <body>
-    <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#" style="font-size:24px">MUNDO JUEGOS</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <form class="form-inline my-2 my-lg-0" style="margin-left:230px;">
+            <input class="form-control mr-sm-2" type="search" style="margin-left:20px;" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </ul>
+        <ul class="navbar-nav">
+          <img src="images/usuario.png" alt="">
+          <li class="nav-item dropdown" style="margin-right:10px;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Cosme Fulanito
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:black;">
+              <a class="dropdown-item" href="#" style="color:grey;">Perfil</a>
+              <a class="dropdown-item" href="#" style="color:grey;">Mis juegos</a>
+              <a class="dropdown-item" href="#" style="color:grey;">Preferencias</a>
+              <a class="dropdown-item" href="#" style="color:grey;">Ayuda</a>
+              <a class="dropdown-item" href="#" style="color:grey;">Cerrar Sesion</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb" style="background-color:inherit;">
+        <li class="breadcrumb-item"><a class="breadcrumb-a" href="#" style="text-decoration:none">Inicio</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb-a" href="#" style="text-decoration:none">Juegos</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb-a" href="#" style="text-decoration:none">Carreras</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Carrerita</li>
+      </ol>
+    </nav>
       <div class="container">
-        <div id="juego">
-          <div id="automovil">
+          <div id="juego">
+            <div id="automovil">
 
+            </div>
+            <div id="rival">
+
+            </div>
           </div>
-          <div id="rival">
-
+        <div class="card offset-9" style="width: 20rem;border-color:black; text-align:center;">
+          <div class="card-body" style="background-color:rgb(52, 58, 64);">
+            <h2 class="card-title" style="color:white;">Carrerita</h2>
+            <h6 class="card-subtitle mb-2 text-muted">Puntaje mas alto <span id="mejorpuntaje">0</span></h6>
+            <h3 style="color:white;">Puntaje <span class="badge badge-light" id="puntaje">0</span></h3>
+            <h3 style="color:white;">Gasolina <span class="badge badge-info" id="gasolina">1000</span></h3>
+            <p></p>
+            <button type="button" id="jugar" name="button" class="btn btn-primary">Jugar</button>
+            <p></p>
+            <h3 style="color:white;">Controles</h3>
+            <img src="images/controles.png" alt="">
           </div>
         </div>
       </div>
-    </div>
-    <button type="button" id="jugar" name="button">Jugar</button>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <footer class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#" style="font-size:24px">MUNDO JUEGOS</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <div style="margin-left:280px;">
+            <i class="fab fa-facebook fa-3x" style="color:white"></i>
+            <i class="fab fa-twitter-square fa-3x" style="color:white;margin-left:20px;"></i>
+            <i class="fab fa-instagram fa-3x" style="color:white;margin-left:20px;"></i>
+          </div>
+        </ul>
+        <p style="color:white;margin-top:10px;">© MUNDO JUEGOS S.L. 2017-2018</p>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/auto.js"></script>

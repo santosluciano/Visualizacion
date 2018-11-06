@@ -6,24 +6,38 @@ function Juego(param = {}) {
   this.auto = new Auto({left:330,bottom:30,idauto:"automovil"});
   this.intervalo = null;
   this.invervaloChequeo = null;
+  this.intervaloPuntaje = null;
   this.rival = document.getElementById("rival");
   this.botonJugar = document.getElementById("jugar");
   this.audioambiente = new Audio("audio/partida.mp3");
   this.audioambiente.loop = true;
   this.audioexplosion = new Audio("audio/choque.mp3");
+  this.puntajeActualDOM = document.getElementById("puntaje");
+  this.puntajeActual = 0;
+  this.mejorPuntaje = 0;
+  this.mejorPuntajeDOM = document.getElementById("mejorpuntaje");
 
   Juego.prototype.comenzar = function () {
     if (this.activo)
       this.resetear();
     else {
       this.botonJugar.innerHTML = "Abandonar";
+      this.botonJugar.classList.remove("btn-primary");
+      this.botonJugar.classList.add("btn-danger");
       this.elem.classList.add("animacion-fondo");
       this.activo = true;
       this.configurarControles();
       this.setEnemigos();
       this.chequearColisiones();
+      this.setPuntaje();
       this.audioambiente.play();
     }
+  }
+  Juego.prototype.setPuntaje = function () {
+    this.intervaloPuntaje = setInterval(() => {
+      this.puntajeActual += 100;
+      this.puntajeActualDOM.innerHTML = this.puntajeActual;}
+      ,1000);
   }
   Juego.prototype.setEnemigos = function () {
       this.intervalo = setInterval(() => {
@@ -61,6 +75,12 @@ function Juego(param = {}) {
       return Math.random() * (645 - 150) + 150;
   }
   Juego.prototype.resetear = function () {
+    if (this.mejorPuntaje < this.puntajeActual){
+      this.mejorPuntaje = this.puntajeActual;
+      this.mejorPuntajeDOM.innerHTML = this.puntajeActual;
+    }
+    this.puntajeActual = 0;
+    this.puntajeActualDOM.innerHTML = this.puntajeActual;
     document.getElementById("jugar").innerHTML = "Jugar";
     this.elem.classList.remove("animacion-fondo");
     this.audioambiente.pause();
@@ -68,6 +88,9 @@ function Juego(param = {}) {
     this.activo = false;
     clearInterval(this.intervaloChequeo);
     clearInterval(this.intervalo);
+    clearInterval(this.intervaloPuntaje);
+    this.botonJugar.classList.remove("btn-danger");
+    this.botonJugar.classList.add("btn-primary");
   }
   Juego.prototype.configurarControles = function() {
     document.addEventListener("keydown", (event) => {

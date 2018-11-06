@@ -16,11 +16,9 @@ function Juego(param = {}) {
   this.puntajeActual = 0;
   this.mejorPuntaje = 0;
   this.mejorPuntajeDOM = document.getElementById("mejorpuntaje");
-  this.gasolina = 1000;
-  this.gasolinaDOM = document.getElementById("gasolina");
   this.informacion = document.getElementById("alerta");
   this.perdiste = false;
-  
+
   Juego.prototype.comenzar = function () {
     if (this.activo)
       this.resetear();
@@ -47,11 +45,6 @@ function Juego(param = {}) {
   Juego.prototype.setPuntaje = function () {
     this.intervaloPuntaje = setInterval(() => {
       this.puntajeActual += 100;
-      this.gasolina -= 50;
-      if (this.gasolina <= 0){
-        this.resetear();
-      }
-      this.gasolinaDOM.innerHTML = this.gasolina;
       this.puntajeActualDOM.innerHTML = this.puntajeActual;}
       ,1000);
   }
@@ -74,7 +67,7 @@ function Juego(param = {}) {
       }
       let datosauto = this.auto.ubicacion();
       if (datosrival.top < datosauto.top+100 && datosrival.top > datosauto.top-100){
-        if (datosrival.right < datosauto.right+50 && datosrival.left > datosauto.left-50){
+        if (datosrival.right < datosauto.right+44 && datosrival.left > datosauto.left-44){
           this.auto.explotar();
           this.elem.classList.remove('animacion-fondo');
           this.juegoPerdido();
@@ -99,14 +92,13 @@ function Juego(param = {}) {
       return Math.random() * (645 - 150) + 150;
   }
   Juego.prototype.resetear = function () {
+    if (this.perdiste == false)
+      this.informacion.innerHTML = "Abandonaste!!!!";
     if (this.mejorPuntaje < this.puntajeActual){
       this.mejorPuntaje = this.puntajeActual;
       this.mejorPuntajeDOM.innerHTML = this.puntajeActual;
+      this.informacion.innerHTML = "Nuevo record!!!";
     }
-    if (this.perdiste == false)
-      this.informacion.innerHTML = "Abandonaste!!!!";
-    this.gasolina = 1000;
-    this.gasolinaDOM.innerHTML = this.gasolina;
     this.puntajeActual = 0;
     this.puntajeActualDOM.innerHTML = this.puntajeActual;
     document.getElementById("jugar").innerHTML = "Jugar";

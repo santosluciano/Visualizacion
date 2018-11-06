@@ -85,7 +85,7 @@ footer{
   }
 }
 
-#rival{
+#rival,#gasolina{
   position: absolute;
   width: 48px;
   height: 101px;
@@ -94,6 +94,11 @@ footer{
   background-repeat: no-repeat;
   bottom: 800px;
   left: 330px;
+}
+#gasolina{
+  width: 80px;
+  height: 71px;
+  background-image: url("../images/gasolina.png");
 }
 
 #automovil.explosion{
@@ -111,15 +116,30 @@ footer{
 }
 
 .mover-rival{
-  animation: mover-rival ease-out 5s;
+  animation: mover-objeto ease-out 5s;
 }
 
-@keyframes mover-rival {
+.mover-gasolina{
+  bottom: 800px;
+  left: 330px;
+  animation: mover-objeto2 ease-out 2s;
+}
+
+@keyframes mover-objeto {
   from {
     bottom: 460px;
   }
   to {
     bottom: -75px;
+  }
+}
+
+@keyframes mover-objeto2 {
+  from {
+    bottom: 460px;
+  }
+  to {
+    bottom: -10px;
   }
 }
 

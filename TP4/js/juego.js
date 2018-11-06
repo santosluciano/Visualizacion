@@ -7,7 +7,9 @@ function Juego(param = {}) {
   this.intervalo = null;
   this.invervaloChequeo = null;
   this.intervaloPuntaje = null;
+  this.invervaloGasolina = null;
   this.rival = null;
+  this.gasolina = null;
   this.botonJugar = document.getElementById("jugar");
   this.audioambiente = new Audio("audio/partida.mp3");
   this.audioambiente.loop = true;
@@ -16,6 +18,8 @@ function Juego(param = {}) {
   this.puntajeActual = 0;
   this.mejorPuntaje = 0;
   this.mejorPuntajeDOM = document.getElementById("mejorpuntaje");
+  this.gasolinaPuntaje = 0;
+  this.gasolinaDOM = document.getElementById("cantidadgasolina");
   this.informacion = document.getElementById("alerta");
   this.perdiste = false;
 
@@ -27,6 +31,8 @@ function Juego(param = {}) {
       this.perdiste = false;
       this.auto.activarAuto();
       this.auto.setPosicion(330,30);
+      this.gasolinaPuntaje = 1500;
+      this.gasolinaDOM.innerHTML = this.gasolinaPuntaje;
       this.botonJugar.classList.remove("btn-primary");
       this.botonJugar.classList.add("btn-danger");
       this.elem.classList.add("animacion-fondo");
@@ -34,9 +40,13 @@ function Juego(param = {}) {
       let rival = document.createElement('div');
       rival.setAttribute("id", "rival");
       this.elem.append(rival);
+      let gasolina = document.createElement('div');
+      gasolina.setAttribute("id", "gasolina");
+      this.elem.append(gasolina);
       this.informacion.innerHTML = "";
       this.configurarControles();
       this.setEnemigos();
+      this.setGasolina();
       this.chequearColisiones();
       this.setPuntaje();
       this.audioambiente.play();
@@ -45,8 +55,13 @@ function Juego(param = {}) {
   Juego.prototype.setPuntaje = function () {
     this.intervaloPuntaje = setInterval(() => {
       this.puntajeActual += 100;
-      this.puntajeActualDOM.innerHTML = this.puntajeActual;}
-      ,1000);
+      this.gasolinaPuntaje -= 50;
+      this.gasolinaDOM.innerHTML = this.gasolinaPuntaje;
+      this.puntajeActualDOM.innerHTML = this.puntajeActual;
+      if (this.gasolinaPuntaje <= 0) {
+        this.juegoPerdido();
+      }
+    },1000);
   }
   Juego.prototype.setEnemigos = function () {
       this.intervalo = setInterval(() => {
@@ -54,6 +69,14 @@ function Juego(param = {}) {
         this.rival.classList.toggle("mover-rival");
         this.rival.style.left = this.anchoRandom()+"px"; }
         , 3500);
+  }
+  Juego.prototype.setGasolina = function () {
+    this.intervaloGasolina = setInterval(() => {
+      this.gasolina = document.getElementById("gasolina");
+      this.gasolina.classList.remove("agarrar-gasolina");
+      this.gasolina.classList.toggle("mover-gasolina");
+      this.gasolina.style.left = this.anchoRandom()+"px"; }
+      , 5000);
   }
   Juego.prototype.chequearColisiones = function () {
     this.intervaloChequeo = setInterval(() => {
@@ -65,6 +88,14 @@ function Juego(param = {}) {
           left: rect.left,
           right: rect.right
       }
+      this.gasolina = document.getElementById("gasolina");
+      let rectgasolina = this.gasolina.getBoundingClientRect();
+      let datosgasolina = {
+          top: rectgasolina.top,
+          bottom: rectgasolina.bottom,
+          left: rectgasolina.left,
+          right: rectgasolina.right
+      }
       let datosauto = this.auto.ubicacion();
       if (datosrival.top < datosauto.top+100 && datosrival.top > datosauto.top-100){
         if (datosrival.right < datosauto.right+44 && datosrival.left > datosauto.left-44){
@@ -73,11 +104,22 @@ function Juego(param = {}) {
           this.juegoPerdido();
         }
       }
+      if (datosgasolina.top < datosauto.top+100 && datosgasolina.top > datosauto.top-100){
+        if (datosgasolina.right < datosauto.right+44 && datosgasolina.left > datosauto.left-44){
+          this.recogerGasolina(datosgasolina.bottom, datosgasolina.left);
+        }
+      }
     }, 100);
+  }
+  Juego.prototype.recogerGasolina = function (bottom,left) {
+    this.gasolinaPuntaje += 500;
+    this.gasolina.classList.remove("mover-gasolina");
+    this.gasolinaDOM.innerHTML = this.gasolinaPuntaje;
   }
   Juego.prototype.juegoPerdido = function () {
     clearInterval(this.intervaloChequeo);
     clearInterval(this.intervalo);
+    clearInterval(this.intervaloGasolina);
     this.perdiste = true;
     this.informacion.innerHTML = "Perdiste!!!!";
     this.audioexplosion.play();
@@ -111,6 +153,7 @@ function Juego(param = {}) {
     clearInterval(this.intervaloChequeo);
     clearInterval(this.intervalo);
     clearInterval(this.intervaloPuntaje);
+    clearInterval(this.intervaloGasolina);
     this.botonJugar.classList.remove("btn-danger");
     this.botonJugar.classList.remove("btn-success");
     this.botonJugar.classList.add("btn-primary");

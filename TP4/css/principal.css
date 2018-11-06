@@ -69,6 +69,10 @@ footer{
   animation: fadeInOut 3s infinite;
 }
 
+.construccion{
+    background-image: url("../images/paginaconstruccion.jpg");
+}
+
 @keyframes fadeInOut {
   0% {
     opacity: 0;

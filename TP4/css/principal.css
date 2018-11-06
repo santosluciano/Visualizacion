@@ -25,6 +25,9 @@ footer{
 .animacion-fondo {
     animation: parallax-background linear 1s infinite;
 }
+.card{
+  height:550px;
+}
 
 @keyframes parallax-background {
     from {
@@ -55,6 +58,27 @@ footer{
 .derecha {
     animation: mover-derecha ease-out 0.01s;
     animation-fill-mode: forwards;
+}
+
+#alerta{
+  position: absolute;
+  bottom:300px;
+  left: 280px;
+  font-size: 50px;
+  color: red;
+  animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 #rival{

@@ -7,7 +7,7 @@ function Juego(param = {}) {
   this.intervalo = null;
   this.invervaloChequeo = null;
   this.intervaloPuntaje = null;
-  this.rival = document.getElementById("rival");
+  this.rival = null;
   this.botonJugar = document.getElementById("jugar");
   this.audioambiente = new Audio("audio/partida.mp3");
   this.audioambiente.loop = true;
@@ -16,16 +16,27 @@ function Juego(param = {}) {
   this.puntajeActual = 0;
   this.mejorPuntaje = 0;
   this.mejorPuntajeDOM = document.getElementById("mejorpuntaje");
-
+  this.gasolina = 1000;
+  this.gasolinaDOM = document.getElementById("gasolina");
+  this.informacion = document.getElementById("alerta");
+  this.perdiste = false;
+  
   Juego.prototype.comenzar = function () {
     if (this.activo)
       this.resetear();
     else {
       this.botonJugar.innerHTML = "Abandonar";
+      this.perdiste = false;
+      this.auto.activarAuto();
+      this.auto.setPosicion(330,30);
       this.botonJugar.classList.remove("btn-primary");
       this.botonJugar.classList.add("btn-danger");
       this.elem.classList.add("animacion-fondo");
       this.activo = true;
+      let rival = document.createElement('div');
+      rival.setAttribute("id", "rival");
+      this.elem.append(rival);
+      this.informacion.innerHTML = "";
       this.configurarControles();
       this.setEnemigos();
       this.chequearColisiones();
@@ -36,17 +47,24 @@ function Juego(param = {}) {
   Juego.prototype.setPuntaje = function () {
     this.intervaloPuntaje = setInterval(() => {
       this.puntajeActual += 100;
+      this.gasolina -= 50;
+      if (this.gasolina <= 0){
+        this.resetear();
+      }
+      this.gasolinaDOM.innerHTML = this.gasolina;
       this.puntajeActualDOM.innerHTML = this.puntajeActual;}
       ,1000);
   }
   Juego.prototype.setEnemigos = function () {
       this.intervalo = setInterval(() => {
+        this.rival = document.getElementById("rival");
         this.rival.classList.toggle("mover-rival");
         this.rival.style.left = this.anchoRandom()+"px"; }
         , 3500);
   }
   Juego.prototype.chequearColisiones = function () {
     this.intervaloChequeo = setInterval(() => {
+      this.rival = document.getElementById("rival");
       let rect = this.rival.getBoundingClientRect();
       let datosrival = {
           top: rect.top,
@@ -67,9 +85,15 @@ function Juego(param = {}) {
   Juego.prototype.juegoPerdido = function () {
     clearInterval(this.intervaloChequeo);
     clearInterval(this.intervalo);
+    this.perdiste = true;
+    this.informacion.innerHTML = "Perdiste!!!!";
     this.audioexplosion.play();
     this.audioambiente.pause();
-    this.rival.removeAttribute('id');
+    this.rival.classList.remove("mover-rival");
+    this.botonJugar.classList.remove("btn-danger");
+    this.botonJugar.classList.add("btn-success");
+    this.botonJugar.innerHTML = "Volver a jugar";
+    clearInterval(this.intervaloPuntaje);
   }
   Juego.prototype.anchoRandom = function () {
       return Math.random() * (645 - 150) + 150;
@@ -79,10 +103,16 @@ function Juego(param = {}) {
       this.mejorPuntaje = this.puntajeActual;
       this.mejorPuntajeDOM.innerHTML = this.puntajeActual;
     }
+    if (this.perdiste == false)
+      this.informacion.innerHTML = "Abandonaste!!!!";
+    this.gasolina = 1000;
+    this.gasolinaDOM.innerHTML = this.gasolina;
     this.puntajeActual = 0;
     this.puntajeActualDOM.innerHTML = this.puntajeActual;
     document.getElementById("jugar").innerHTML = "Jugar";
     this.elem.classList.remove("animacion-fondo");
+    this.rival.classList.remove("mover-rival");
+    this.auto.resetear();
     this.audioambiente.pause();
     this.audioambiente.currentTime = 0;
     this.activo = false;
@@ -90,6 +120,7 @@ function Juego(param = {}) {
     clearInterval(this.intervalo);
     clearInterval(this.intervaloPuntaje);
     this.botonJugar.classList.remove("btn-danger");
+    this.botonJugar.classList.remove("btn-success");
     this.botonJugar.classList.add("btn-primary");
   }
   Juego.prototype.configurarControles = function() {

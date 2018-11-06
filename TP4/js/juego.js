@@ -58,7 +58,14 @@ function Juego(param = {}) {
       this.gasolinaPuntaje -= 50;
       this.gasolinaDOM.innerHTML = this.gasolinaPuntaje;
       this.puntajeActualDOM.innerHTML = this.puntajeActual;
+      if (this.gasolinaPuntaje <= 200){
+        this.gasolinaDOM.classList.remove("badge-light");
+        this.gasolinaDOM.classList.add("badge-warning");
+      }
       if (this.gasolinaPuntaje <= 0) {
+        this.gasolinaDOM.classList.remove("badge-warning");
+        this.gasolinaDOM.classList.add("badge-danger");
+        this.auto.resetear();
         this.juegoPerdido();
       }
     },1000);
@@ -112,7 +119,13 @@ function Juego(param = {}) {
     }, 100);
   }
   Juego.prototype.recogerGasolina = function (bottom,left) {
-    this.gasolinaPuntaje += 500;
+    if (this.gasolinaPuntaje <= 200){
+      this.gasolinaDOM.classList.remove("badge-warning");
+      this.gasolinaDOM.classList.add("badge-light");
+    }
+    this.gasolinaPuntaje += 300;
+    this.puntajeActual += 200;
+    this.puntajeActualDOM.innerHTML = this.puntajeActual;
     this.gasolina.classList.remove("mover-gasolina");
     this.gasolinaDOM.innerHTML = this.gasolinaPuntaje;
   }
@@ -141,6 +154,9 @@ function Juego(param = {}) {
       this.mejorPuntajeDOM.innerHTML = this.puntajeActual;
       this.informacion.innerHTML = "Nuevo record!!!";
     }
+    this.gasolinaDOM.classList.remove("badge-danger");
+    this.gasolinaDOM.classList.remove("badge-warning");
+    this.gasolinaDOM.classList.add("badge-light");
     this.puntajeActual = 0;
     this.puntajeActualDOM.innerHTML = this.puntajeActual;
     document.getElementById("jugar").innerHTML = "Jugar";

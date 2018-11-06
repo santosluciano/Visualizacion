@@ -7,7 +7,7 @@ function Auto(param = {}) {
   Auto.prototype.derecha = function () {
     if (this.left < 645 && this.activo){
       let clase = this.elem.classList;
-      this.left += 6;
+      this.left += 4;
       this.elem.style.left = this.left+"px";
       if (!clase.contains("derecha"))
         clase.add("derecha");
@@ -25,7 +25,7 @@ function Auto(param = {}) {
   Auto.prototype.izquierda = function () {
     if (this.left > 150 && this.activo){
       let clase = this.elem.classList;
-      this.left -= 6;
+      this.left -= 4;
       this.elem.style.left = this.left+"px";
       if (!clase.contains("izquierda"))
         clase.add("izquierda");

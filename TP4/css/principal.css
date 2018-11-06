@@ -25,6 +25,7 @@ footer{
 .animacion-fondo {
     animation: parallax-background linear 1s infinite;
 }
+
 .card{
   height:550px;
 }

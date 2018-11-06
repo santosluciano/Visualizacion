@@ -13,7 +13,7 @@ function Juego(param = {}) {
   this.botonJugar = document.getElementById("jugar");
   this.audioambiente = new Audio("audio/partida.mp3");
   this.audioambiente.loop = true;
-  this.audioexplosion = new Audio("audio/choque.mp3");
+  this.audioevento = new Audio("audio/choque.mp3");
   this.puntajeActualDOM = document.getElementById("puntaje");
   this.puntajeActual = 0;
   this.mejorPuntaje = 0;
@@ -22,6 +22,7 @@ function Juego(param = {}) {
   this.gasolinaDOM = document.getElementById("cantidadgasolina");
   this.informacion = document.getElementById("alerta");
   this.perdiste = false;
+  this.choco = false;
 
   Juego.prototype.comenzar = function () {
     if (this.activo)
@@ -31,7 +32,7 @@ function Juego(param = {}) {
       this.perdiste = false;
       this.auto.activarAuto();
       this.auto.setPosicion(330,30);
-      this.gasolinaPuntaje = 1500;
+      this.gasolinaPuntaje = 1000;
       this.gasolinaDOM.innerHTML = this.gasolinaPuntaje;
       this.botonJugar.classList.remove("btn-primary");
       this.botonJugar.classList.add("btn-danger");
@@ -108,6 +109,7 @@ function Juego(param = {}) {
         if (datosrival.right < datosauto.right+44 && datosrival.left > datosauto.left-44){
           this.auto.explotar();
           this.elem.classList.remove('animacion-fondo');
+          this.choco = true;
           this.juegoPerdido();
         }
       }
@@ -123,8 +125,10 @@ function Juego(param = {}) {
       this.gasolinaDOM.classList.remove("badge-warning");
       this.gasolinaDOM.classList.add("badge-light");
     }
-    this.gasolinaPuntaje += 300;
-    this.puntajeActual += 200;
+    this.audioevento.src = "audio/gasolina.mp3";
+    this.audioevento.play();
+    this.gasolinaPuntaje += 400;
+    this.puntajeActual += 250;
     this.puntajeActualDOM.innerHTML = this.puntajeActual;
     this.gasolina.classList.remove("mover-gasolina");
     this.gasolinaDOM.innerHTML = this.gasolinaPuntaje;
@@ -135,7 +139,17 @@ function Juego(param = {}) {
     clearInterval(this.intervaloGasolina);
     this.perdiste = true;
     this.informacion.innerHTML = "Perdiste!!!!";
-    this.audioexplosion.play();
+    if (this.choco){
+      this.audioevento.src = "audio/choque.mp3";
+      this.audioevento.play();
+    }
+    else{
+      this.audioevento.src = "audio/frenada.mp3";
+      this.audioevento.play();
+      setTimeout(()=>{
+        this.elem.classList.remove("animacion-fondo");
+      },2500);
+    }
     this.audioambiente.pause();
     this.rival.classList.remove("mover-rival");
     this.botonJugar.classList.remove("btn-danger");
@@ -154,6 +168,7 @@ function Juego(param = {}) {
       this.mejorPuntajeDOM.innerHTML = this.puntajeActual;
       this.informacion.innerHTML = "Nuevo record!!!";
     }
+    this.choco = false;
     this.gasolinaDOM.classList.remove("badge-danger");
     this.gasolinaDOM.classList.remove("badge-warning");
     this.gasolinaDOM.classList.add("badge-light");

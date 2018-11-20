@@ -1,0 +1,73 @@
+body{
+  background-color: #0b2545;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+nav.navbar{
+  background-color: #212121;
+}
+footer{
+  background-color: #212121;
+  height: 100px;
+  margin-top: 100px;
+}
+.dropdown-item:hover{
+  background-color: #212121;
+  color:white;
+}
+.breadcrumb-a{
+  color: white;
+}
+.breadcrumb-a:hover {
+  color: grey;
+}
+.redes{
+  color: white;
+}
+.redes:hover{
+  color: grey;
+}
+.navbar a.navbar-brand:hover{
+  color: grey;
+}
+.carousel .carousel-inner{
+  border-radius: 6px;
+  z-index: 999;
+}
+.mini-img-carousel{
+  width: 100%;
+  height: 100%;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.mini-carousel{
+  margin-top: 5%;
+}
+.titulares{
+  color:white;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.columna-recomendados{
+  background-color: #212121;
+  border: 1px solid black;
+  margin-top: 55px;
+  margin-left:-20px;
+  border-radius: 6px;
+}
+.btncarousel{
+  color: grey;
+}
+.btncarousel:hover{
+  color: white;
+  text-decoration: none;
+}
+.mini-activo{
+  color: white;
+}
+.flecha{
+  color: white;
+}
+.fa-star{
+  color: yellow;
+}

@@ -67,7 +67,31 @@ footer{
 }
 .flecha{
   color: white;
+  margin-top: 60px;
+}
+.flecha:hover{
+  cursor: pointer;
+  color: grey;
 }
 .fa-star{
   color: yellow;
+}
+
+/*efectos css*/
+@keyframes desaparecer-fotos {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes aparecer-fotos {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

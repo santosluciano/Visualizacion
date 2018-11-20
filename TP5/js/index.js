@@ -15,4 +15,7 @@ $(document).ready(function () {
     else if ((id == "img4"))
       $('#imagencarousel4').addClass("active");
   });
+  $('tr').click( function() {
+    window.location = $(this).attr('title');
+  });
 });

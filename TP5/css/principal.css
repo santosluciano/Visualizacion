@@ -8,7 +8,7 @@ nav.navbar{
 footer{
   background-color: #212121;
   height: 100px;
-  margin-top: 100px;
+  margin-top: 40px;
 }
 .dropdown-item:hover{
   background-color: #212121;
@@ -45,13 +45,13 @@ footer{
 .titulares{
   color:white;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 5px;
 }
 .columna-recomendados{
   background-color: #212121;
   border: 1px solid black;
-  margin-top: 55px;
+  margin-top: 75px;
   margin-left:-20px;
   border-radius: 6px;
 }
@@ -76,22 +76,52 @@ footer{
 .fa-star{
   color: yellow;
 }
-
-/*efectos css*/
-@keyframes desaparecer-fotos {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.img-recomendado{
+  margin-top: 20px;
 }
-
-@keyframes aparecer-fotos {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.pieoferta{
+  background-color: black;
+  width: 200px;
+  margin-top: 5px;
+  font-size: 16px;
+  color: white;
+}
+.precioanterior{
+  text-decoration: line-through;
+  padding: 20px;
+}
+.precioactual{
+  text-align: center;
+  padding: 15px;
+}
+.descuento{
+  text-align: right;
+  padding: 15px;
+}
+.tabla-juegos{
+  margin-top: 15px;
+}
+.img-tabla{
+  height: 50px;
+  width: 100px;
+}
+.titulojuego-tabla{
+  color: white;
+}
+.preciotabla{
+  position: relative;
+  top: 10px;
+  font-size: 20px;
+}
+.tabla-juegos tbody tr:hover{
+  background-color: grey;
+  cursor: pointer;
+}
+.flechaabajo{
+  color: white;
+  margin-top: -60px;
+}
+.flechaabajo:hover{
+  color: grey;
+  cursor: pointer;
 }

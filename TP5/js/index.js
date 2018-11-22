@@ -24,4 +24,10 @@ $(document).ready(function () {
     event.preventDefault();
     window.location = "index-log.html";
   });
+  $('.dropdown-juegos').on("mouseover",function(){
+    $(this).dropdown('toggle');
+  });
+  $('.dropdown-juegos').on('click',function(){
+    window.location = 'todoslosjuegos.html';
+  });
 });

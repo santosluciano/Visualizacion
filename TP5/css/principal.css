@@ -182,3 +182,6 @@ footer{
   background-color: #212121;
   border: 1px solid black;
 }
+.dropdown-juegos:hover{
+  cursor: pointer;
+}

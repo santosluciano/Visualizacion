@@ -16,9 +16,11 @@ footer{
 }
 .breadcrumb-a{
   color: white;
+  text-decoration: none;
 }
 .breadcrumb-a:hover {
   color: grey;
+  text-decoration: none;
 }
 .redes{
   color: white;
@@ -133,4 +135,28 @@ footer{
 .flechaabajo:hover{
   color: grey;
   cursor: pointer;
+}
+.login{
+  margin-top:10px;
+  margin-left:38px;
+}
+.navbar-brand{
+  font-size:24px;
+}
+.derechos{
+  color:white;
+  margin-top:10px;
+}
+.labeltiempojugado{
+  color:white;
+}
+.breadcrumb{
+  background-color:inherit;
+}
+.accionesprincipales{
+  background-color:#212121;
+  height:70px;
+  margin-top:30px;
+  border-radius:6px;
+  border: 1px solid black;
 }

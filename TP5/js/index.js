@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.carousel').carousel('pause');
+  /*Hover sobre los item del costado del carousel*/
   $('.btncarousel').hover(function(event) {
     event.preventDefault();
     let id = $(this).attr("id");
@@ -15,9 +15,11 @@ $(document).ready(function () {
     else if ((id == "img4"))
       $('#imagencarousel4').addClass("active");
   });
+  /*click en la tabla de mas jugados y mejores valorados*/
   $('tr').click( function() {
     window.location = $(this).attr('title');
   });
+  //accion al hacer click en login
   $('.login').on('click', function(event){
     event.preventDefault();
     window.location = "index-log.html";

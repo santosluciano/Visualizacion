@@ -22,16 +22,32 @@
           </div>
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item dropdown" style="margin-left: 15px;margin-right:10px;">
+          <li class="nav-item dropdown" style="margin-left: 15px;margin-right:25px;">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Iniciar sesion
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="seccion.html">Perfil</a>
-              <a class="dropdown-item" href="seccion.html">Mis juegos</a>
-              <a class="dropdown-item" href="seccion.html">Preferencias</a>
-              <a class="dropdown-item" href="seccion.html">Ayuda</a>
-              <a class="dropdown-item" href="seccion.html">Cerrar Sesion</a>
+            <div class="dropdown-menu" style="left:-60px;width:220px;" aria-labelledby="navbarDropdown">
+              <div class="container">
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" placeholder="joe@doe.com">
+                  </div>
+                  <div class="form-group" style="margin-top:-10px;">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input type="password" class="form-control" id="pass" placeholder="*********">
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                  </div>
+                  <a href="">¿Olvidaste tu contraseña?</a>
+                  <a href="">Registrarse</a>
+                  <div style="margin-top:10px; margin-left:38px;">
+                    <button type="submit" class="btn btn-primary login">Iniciar Sesion</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </li>
         </ul>
@@ -57,9 +73,6 @@
               <a class="dropdown-item" href="#">Rpg</a>
               <a class="dropdown-item" href="#">Shooter</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Mis juegos</a>
           </li>
         </ul>
       </div>

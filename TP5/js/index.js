@@ -18,4 +18,8 @@ $(document).ready(function () {
   $('tr').click( function() {
     window.location = $(this).attr('title');
   });
+  $('.login').on('click', function(event){
+    event.preventDefault();
+    window.location = "index-log.html";
+  });
 });

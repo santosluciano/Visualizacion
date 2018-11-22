@@ -31,7 +31,7 @@ footer{
 }
 .carousel .carousel-inner{
   border-radius: 6px;
-  z-index: 999;
+  z-index: 1;
 }
 .mini-img-carousel{
   width: 100%;
@@ -48,12 +48,21 @@ footer{
   margin-top: 40px;
   margin-bottom: 5px;
 }
-.columna-recomendados{
+.columna-recomendados, .columnaResumen{
   background-color: #212121;
   border: 1px solid black;
   margin-top: 75px;
   margin-left:-20px;
   border-radius: 6px;
+}
+.columnaResumen{
+  margin-top: 0px;
+  color: white;
+  padding: 20px;
+}
+.valoracion{
+  position: absolute;
+  top: 250px;
 }
 .btncarousel{
   color: grey;

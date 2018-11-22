@@ -171,3 +171,14 @@ footer{
   margin-top: -10px;
   font-size: 26px;
 }
+.ranking,.comentarios{
+  margin-top:40px;
+}
+.titulosecundario{
+  color: white;
+  font-size: 20px;  
+}
+.table-dark{
+  background-color: #212121;
+  border: 1px solid black;
+}

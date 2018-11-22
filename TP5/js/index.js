@@ -16,7 +16,7 @@ $(document).ready(function () {
       $('#imagencarousel4').addClass("active");
   });
   /*click en la tabla de mas jugados y mejores valorados*/
-  $('tr').click( function() {
+  $('.tr-click').click( function() {
     window.location = $(this).attr('title');
   });
   //accion al hacer click en login

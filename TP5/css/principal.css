@@ -160,3 +160,14 @@ footer{
   border-radius:6px;
   border: 1px solid black;
 }
+.btn-accionjuego{
+  position: absolute;
+  top:240px;
+  right: 25px;
+  font-size: 18px;
+}
+.titular-juego{
+  color: white;
+  margin-top: -10px;
+  font-size: 26px;
+}

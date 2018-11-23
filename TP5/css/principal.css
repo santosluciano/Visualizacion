@@ -211,7 +211,8 @@ footer{
   padding: 10px;
 }
 .nav-pagination{
-  margin-top: 30px;
+  margin-top: 5px;
+  margin-left: 22px;
 }
 .grupo-juegos{
   margin-top: 40px;
@@ -219,4 +220,8 @@ footer{
 .contenedor-juego{
   margin-bottom: 40px;
   margin-right: 20px;
+}
+.form-check{
+  color: white;
+  margin-left: 25px;
 }

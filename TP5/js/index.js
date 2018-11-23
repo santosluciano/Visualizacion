@@ -30,4 +30,6 @@ $(document).ready(function () {
   $('.dropdown-juegos').on('click',function(){
     window.location = 'todoslosjuegos.html';
   });
+  //cancela el autodeslizante del carousel
+  $('.carousel').carousel({ interval: false }); 
 });

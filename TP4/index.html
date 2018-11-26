@@ -5,36 +5,66 @@
     <title>Mundo juegos - Carrerita</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/principal.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="seccion.html" style="font-size:24px">MUNDO JUEGOS</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-          <form class="form-inline my-2 my-lg-0" style="margin-left:230px;">
-            <input class="form-control mr-sm-2" type="search" style="margin-left:20px;" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-          </form>
-        </ul>
-        <ul class="navbar-nav">
-          <img src="images/usuario.png" alt="">
-          <li class="nav-item dropdown" style="margin-right:10px;">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Cosme Fulanito
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:black;">
-              <a class="dropdown-item" href="seccion.html" style="color:grey;">Perfil</a>
-              <a class="dropdown-item" href="seccion.html" style="color:grey;">Mis juegos</a>
-              <a class="dropdown-item" href="seccion.html" style="color:grey;">Preferencias</a>
-              <a class="dropdown-item" href="seccion.html" style="color:grey;">Ayuda</a>
-              <a class="dropdown-item" href="seccion.html" style="color:grey;">Cerrar Sesion</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <nav aria-label="breadcrumb">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="index.html">MUNDO JUEGOS</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto" style="margin-left:25%">
+              <div class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" style="margin-left:20px;" placeholder="Search" aria-label="Search">
+                <a class="btn btn-outline-success my-2 my-sm-0" href="juegos.html"><i class="fas fa-search"></i></a>
+              </div>
+            </ul>
+            <ul class="navbar-nav">
+              <img src="images/nopic.jpg" alt="">
+                <li class="nav-item dropdown" style="margin-left: 15px;margin-right:10px;">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cosme Fulanito
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="seccion.html">Perfil</a>
+                    <a class="dropdown-item" href="seccion.html">Mis juegos</a>
+                    <a class="dropdown-item" href="seccion.html">Preferencias</a>
+                    <a class="dropdown-item" href="seccion.html">Ayuda</a>
+                    <a class="dropdown-item" href="index.html">Cerrar Sesion</a>
+                  </div>
+                </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto activo">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle dropdown-juegos" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Juegos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Free to play</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Accion</a>
+                  <a class="dropdown-item" href="#">Arcade</a>
+                  <a class="dropdown-item" href="#">Carreras</a>
+                  <a class="dropdown-item" href="#">Deportes</a>
+                  <a class="dropdown-item" href="#">Rpg</a>
+                  <a class="dropdown-item" href="#">Shooter</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mis juegos</a>
+              </li>
+            </ul>
+          </div>
+        </nav>    <nav aria-label="breadcrumb">
       <ol class="breadcrumb" style="background-color:inherit;">
         <li class="breadcrumb-item"><a class="breadcrumb-a" href="seccion.html" style="text-decoration:none">Inicio</a></li>
         <li class="breadcrumb-item"><a class="breadcrumb-a" href="seccion.html" style="text-decoration:none">Juegos</a></li>
@@ -52,7 +82,7 @@
             </div>
           </div>
         <div class="card offset-9" style="width: 20rem;border-color:black; text-align:center;">
-          <div class="card-body" style="background-color:rgb(52, 58, 64);">
+          <div class="card-body dashboard">
             <h2 class="card-title" style="color:white;">Carrerita</h2>
             <p></p>
             <h6 class="card-subtitle mb-2 text-muted">Puntaje mas alto <span id="mejorpuntaje">0</span></h6>
@@ -68,19 +98,20 @@
           </div>
         </div>
       </div>
-    <footer class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#" style="font-size:24px">MUNDO JUEGOS</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
-          <div style="margin-left:280px;">
-            <i class="fab fa-facebook fa-3x" style="color:white"></i>
-            <i class="fab fa-twitter-square fa-3x" style="color:white;margin-left:20px;"></i>
-            <i class="fab fa-instagram fa-3x" style="color:white;margin-left:20px;"></i>
+      <footer class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="index.html">MUNDO JUEGOS</a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto" style="margin-left:40%">
+              <div>
+                <a class="fab fa-facebook fa-3x redes" target="_blank" href="https://www.facebook.com/"></a>
+                <a class="fab fa-twitter-square fa-3x redes" target="_blank" style="margin-left:20px;" href="https://twitter.com/"></a>
+                <a class="fab fa-instagram fa-3x redes" target="_blank" style="margin-left:20px;" href="https://www.instagram.com/"></a>
+              </div>
+            </ul>
           </div>
-        </ul>
-        <p style="color:white;margin-top:10px;">© MUNDO JUEGOS S.L. 2017-2018</p>
-      </div>
-    </footer>
+        <p class="derechos">© MUNDO JUEGOS S.L. 2017-2018</p>
+      </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/auto.js"></script>

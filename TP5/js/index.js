@@ -31,5 +31,13 @@ $(document).ready(function () {
     window.location = 'todoslosjuegos.html';
   });
   //cancela el autodeslizante del carousel
-  $('.carousel').carousel({ interval: false }); 
+  $('.carousel.active').carousel({ interval: false }); 
+  $('.flecha-infinito').on('click',function(){
+    $('.item-infinito.active').addClass('stand');
+    $('.item-infinito.active').removeClass('active');
+    $('.item-infinito.inactive').addClass('active');
+    $('.item-infinito.inactive').removeClass('inactive');
+    $('.item-infinito.stand').addClass('inactive');
+    $('.item-infinito.stand').removeClass('stand');
+  });
 });

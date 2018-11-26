@@ -225,3 +225,20 @@ footer{
   color: white;
   margin-left: 25px;
 }
+.item-infinito{
+  display: none;
+  opacity: 0;
+}
+.item-infinito.active {
+    display: inline-block;
+    animation: mostrar-item 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes mostrar-item{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}

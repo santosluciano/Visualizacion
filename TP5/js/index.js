@@ -31,7 +31,7 @@ $(document).ready(function () {
     window.location = 'todoslosjuegos.html';
   });
   //cancela el autodeslizante del carousel
-  $('.carousel.active').carousel({ interval: false }); 
+  $('.carousel.slide').carousel({ interval: false }); 
   $('.flecha-infinito').on('click',function(){
     $('.item-infinito.active').addClass('stand');
     $('.item-infinito.active').removeClass('active');
@@ -39,5 +39,13 @@ $(document).ready(function () {
     $('.item-infinito.inactive').removeClass('inactive');
     $('.item-infinito.stand').addClass('inactive');
     $('.item-infinito.stand').removeClass('stand');
+  });
+  $('.flecha-jugados').on('click',function(){
+    $('.item-jugados.active').addClass('stand');
+    $('.item-jugados.active').removeClass('active');
+    $('.item-jugados.inactive').addClass('active');
+    $('.item-jugados.inactive').removeClass('inactive');
+    $('.item-jugados.stand').addClass('inactive');
+    $('.item-jugados.stand').removeClass('stand');
   });
 });

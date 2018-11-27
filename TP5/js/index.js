@@ -93,6 +93,16 @@ $(document).ready(function () {
     window.location = 'juego.html';
   });
   $('.flechaabajo').on('click', function(){
-    window.location = 'todoslosjuegos.html';
+    if ($(this).attr("title") == "valorados"){
+      window.location = 'todoslosjuegos-valorados.html';
+    } else{
+      window.location = 'todoslosjuegos-ultimos.html';
+    }
+  });
+  $('.dropdown-item.order').on('click',function(event){
+    event.preventDefault();
+    $("#dropdownFiltro").html($(this).html());
+    $('.dropdown-item.order').removeClass('active');
+    $(this).addClass('active');
   });
 });

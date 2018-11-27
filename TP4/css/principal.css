@@ -96,7 +96,7 @@ body{
   height: 96px;
   position: absolute;
   background: url("../images/explosion.png") 0 0;
-  animation: explotar 1s steps(10) infinite;
+  animation: explotar 1s steps(10);
 }
 
 @keyframes explotar {

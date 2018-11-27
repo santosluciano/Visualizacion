@@ -315,3 +315,48 @@ footer{
   font-size: 20px;
   top: 19px;
 }
+/*comentarios*/
+/* CSS Test begin */
+.comment-box {
+  margin-top: 30px !important;
+}
+/* CSS Test end */
+
+.comment-box img {
+  width: 50px;
+  height: 50px;
+}
+.comment-box .media-left {
+  padding-right: 10px;
+  width: 65px;
+}
+.comment-box .media-body p {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #212121;
+  color: white;
+}
+.comment-box .media-body .media p {
+  margin-bottom: 0;
+}
+.comment-box .media-heading {
+  background-color: #212121;
+  border: 1px solid black;
+  padding: 7px 10px;
+  position: relative;
+  margin-bottom: -1px;
+  color: white;
+}
+.comment-box .media-heading:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #212121;
+  border: 1px solid black;
+  border-width: 1px 0 0 1px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 10px;
+  left: -6px;
+}

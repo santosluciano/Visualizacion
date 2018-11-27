@@ -360,3 +360,38 @@ footer{
   top: 10px;
   left: -6px;
 }
+.corazon{
+  position: absolute;
+  left:350px;
+  top: 10px;  
+}
+.corazon:hover{
+  cursor: pointer;
+}
+.corazon.animacion{
+  animation: click-corazon 1s;
+  animation-fill-mode: forwards;
+}
+.corazon.animacion-dislike{
+  animation: disclick-corazon 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes click-corazon{
+  50%{
+    transform: scale(1.4);
+  }
+  100%{
+    transform: scale(1);
+    color: red;
+  }
+}
+@keyframes disclick-corazon{
+  50%{
+    transform: scale(0.6);
+    color: white; 
+  }
+  100%{
+    transform: scale(1);
+    color: white;
+  }
+}

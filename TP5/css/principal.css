@@ -95,10 +95,14 @@ footer{
 }
 .pieoferta{
   background-color: black;
-  width: 200px;
+  width: 130px;
   margin-top: 5px;
   font-size: 16px;
   color: white;
+  position: absolute;
+  top: 141px;
+  right: 145px;
+  border-radius: 0px 0px 0px 5px;
 }
 .precioanterior{
   text-decoration: line-through;

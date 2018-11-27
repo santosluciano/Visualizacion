@@ -104,5 +104,24 @@ $(document).ready(function () {
     $("#dropdownFiltro").html($(this).html());
     $('.dropdown-item.order').removeClass('active');
     $(this).addClass('active');
+    cargarJuegos();
   });
+  function cargarJuegos(){
+    let pagina = $('.grupo-juegos').html();
+    $('.grupo-juegos').html('<i class="fas fa-circle-notch fa-spin fa-2x" style="color:white;margin-left:350px;"></i>');
+    setTimeout(function(){
+      $('.grupo-juegos').html(pagina);
+      $('.contenedor-juego').on('click', function(){
+        window.location = 'juego.html';
+      });
+    },2000)
+  }
+  cargarJuegos();
+  $('.filter-input').on('change',function(){
+    if (validarSiNumero($(this).val()))
+      $(this).val("");
+  });
+  function validarSiNumero(numero){
+    return (!/^([0-9])*$/.test(numero));
+  }
 });

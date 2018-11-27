@@ -269,7 +269,7 @@ footer{
   box-shadow: 0 0 20px yellow;
 }
 .contenedor-juego.animacion{
-  animation: mostrar-contenedor-juego 2s;
+  animation: mostrar-contenedor-juego 1.2s;
   animation-fill-mode: none;
 }
 @keyframes mostrar-contenedor-juego{
@@ -283,10 +283,6 @@ footer{
 .iconcheck{
   margin-top:4px;
   color:white;
-  display: none;
-}
-.iconcheck.active{
-  display: inline;
 }
 .iconcheck:hover{
   color: lightblue;

@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="index.html">MUNDO JUEGOS</a>
+      <a class="navbar-brand" href="index-log.html">MUNDO JUEGOS</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -18,7 +18,7 @@
         <ul class="navbar-nav mr-auto" style="margin-left:25%">
           <div class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" style="margin-left:20px;" placeholder="Search" aria-label="Search">
-            <a class="btn btn-outline-success my-2 my-sm-0" href="juegos.html"><i class="fas fa-search"></i></a>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="todoslosjuegos.html"><i class="fas fa-search"></i></a>
           </div>
         </ul>
         <ul class="navbar-nav">
@@ -42,21 +42,21 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto activo">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio</a>
+            <a class="nav-link" href="index-log.html">Inicio</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle dropdown-juegos" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Juegos
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Free to play</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Free to play</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Accion</a>
-              <a class="dropdown-item" href="#">Arcade</a>
-              <a class="dropdown-item" href="#">Carreras</a>
-              <a class="dropdown-item" href="#">Deportes</a>
-              <a class="dropdown-item" href="#">Rpg</a>
-              <a class="dropdown-item" href="#">Shooter</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Accion</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Arcade</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Carreras</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Deportes</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Rpg</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Shooter</a>
             </div>
           </li>
           <li class="nav-item">
@@ -116,6 +116,26 @@
               Shooter
             </label>
           </div>
+          <p style="color:white;margin-top:15px;">Precio</p>
+          <div class="row filter">
+            <div class="col-3">
+              <input type="text" style="font-size: 14px;" class="form-control filter-input" placeholder="Min">
+            </div>
+            <div class="col-3">
+              <input type="text" class="form-control filter-input" style="font-size: 14px;" placeholder="Max">
+            </div>
+            <i class="fas fa-check fa-2x iconcheck active"></i>
+          </div>
+          <p style="color:white;margin-top:20px;">Edad</p>
+          <div class="row filter">
+            <div class="col-3">
+              <input type="text" class="form-control filter-input" style="font-size: 14px;" placeholder="Min">
+            </div>
+            <div class="col-3">
+              <input type="text" class="form-control filter-input" style="font-size: 14px;" placeholder="Max">
+            </div>
+            <i class="fas fa-check fa-2x iconcheck active"></i>
+          </div>
         </div>
         <div class="col-9">
           <div class="row">
@@ -134,49 +154,25 @@
                     <a class="dropdown-item" href="#">Mas descargado</a>
                     <a class="dropdown-item" href="#">Ultimos añadidos</a>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
           <div class="row grupo-juegos">
-              <div class="col-3 contenedor-juego">
+              <div class="col-3 contenedor-juego animacion">
                   <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
                   <div class="info-juego rounded">
                     <p class="etiqueta-juego">Carrerita</p>
                     <span class="precio-juego">$200</span>
                   </div>
               </div>
-              <div class="col-3 contenedor-juego">
+              <div class="col-3 contenedor-juego animacion">
                   <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
                   <div class="info-juego rounded">
                     <p class="etiqueta-juego">Carrerita</p>
                     <span class="precio-juego">$200</span>
                   </div>
               </div>
-              <div class="col-3 contenedor-juego">
-                  <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
-                  <div class="info-juego rounded">
-                    <p class="etiqueta-juego">Carrerita</p>
-                    <span class="precio-juego">$200</span>
-                  </div>
-              </div>
-              <div class="offset-2">
-
-              </div>
-              <div class="col-3 contenedor-juego">
-                  <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
-                  <div class="info-juego rounded">
-                    <p class="etiqueta-juego">Carrerita</p>
-                    <span class="precio-juego">$200</span>
-                  </div>
-              </div>
-              <div class="col-3 contenedor-juego">
-                  <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
-                  <div class="info-juego rounded">
-                    <p class="etiqueta-juego">Carrerita</p>
-                    <span class="precio-juego">$200</span>
-                  </div>
-              </div>
-              <div class="col-3 contenedor-juego">
+              <div class="col-3 contenedor-juego animacion">
                   <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
                   <div class="info-juego rounded">
                     <p class="etiqueta-juego">Carrerita</p>
@@ -186,21 +182,45 @@
               <div class="offset-2">
 
               </div>
-              <div class="col-3 contenedor-juego">
+              <div class="col-3 contenedor-juego animacion">
                   <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
                   <div class="info-juego rounded">
                     <p class="etiqueta-juego">Carrerita</p>
                     <span class="precio-juego">$200</span>
                   </div>
               </div>
-              <div class="col-3 contenedor-juego">
+              <div class="col-3 contenedor-juego animacion">
                   <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
                   <div class="info-juego rounded">
                     <p class="etiqueta-juego">Carrerita</p>
                     <span class="precio-juego">$200</span>
                   </div>
               </div>
-              <div class="col-3 contenedor-juego">
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">Carrerita</p>
+                    <span class="precio-juego">$200</span>
+                  </div>
+              </div>
+              <div class="offset-2">
+
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">Carrerita</p>
+                    <span class="precio-juego">$200</span>
+                  </div>
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">Carrerita</p>
+                    <span class="precio-juego">$200</span>
+                  </div>
+              </div>
+              <div class="col-3 contenedor-juego animacion">
                   <img src="images/carrerita.png" class="img-fluid rounded" alt="Responsive image">
                   <div class="info-juego rounded">
                     <p class="etiqueta-juego">Carrerita</p>
@@ -237,7 +257,7 @@
       </div>
     </div>
     <footer class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="index.html">MUNDO JUEGOS</a>
+      <a class="navbar-brand" href="index-log.html">MUNDO JUEGOS</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto" style="margin-left:40%">
           <div>

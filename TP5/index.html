@@ -18,7 +18,7 @@
         <ul class="navbar-nav mr-auto" style="margin-left:25%">
           <div class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" style="margin-left:20px;" placeholder="Search" aria-label="Search">
-            <a class="btn btn-outline-success my-2 my-sm-0" href="juegos.html"><i class="fas fa-search"></i></a>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="todoslosjuegos.html"><i class="fas fa-search"></i></a>
           </div>
         </ul>
         <ul class="navbar-nav">
@@ -37,15 +37,17 @@
                     <label for="exampleInputPassword1">Contraseña</label>
                     <input type="password" class="form-control" id="pass" placeholder="*********">
                   </div>
-                  <div class="form-group form-check">
+                  <label class="alerta-login">Usuario y/o contraseña invalido!</label>
+                  <div class="form-group form-check" style="margin-left:3px;">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                    <label class="form-check-label" for="exampleCheck1" style="color:black;">Recordarme</label>
                   </div>
-                  <a href="">¿Olvidaste tu contraseña?</a>
-                  <a href="">Registrarse</a>
+                  <a href="seccion.html">¿Olvidaste tu contraseña?</a>
+                  <a href="seccion.html">Registrarse</a>
                   <div>
                     <button type="submit" class="btn btn-primary login">Iniciar Sesion</button>
                   </div>
+                  <span class="login-loading"></span>
                 </form>
               </div>
             </div>
@@ -57,21 +59,21 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto activo">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Inicio</a>
+            <a class="nav-link" href="index.html">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle dropdown-juegos" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Juegos
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Free to play</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Free to play</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Accion</a>
-              <a class="dropdown-item" href="#">Arcade</a>
-              <a class="dropdown-item" href="#">Carreras</a>
-              <a class="dropdown-item" href="#">Deportes</a>
-              <a class="dropdown-item" href="#">Rpg</a>
-              <a class="dropdown-item" href="#">Shooter</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Accion</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Arcade</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Carreras</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Deportes</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Rpg</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Shooter</a>
             </div>
           </li>
         </ul>
@@ -205,7 +207,7 @@
           <p class="titulares">Mejores valorados</p>
           <table class="table table-dark tabla-juegos">
             <tbody>
-              <tr title="index.html" class="tr-click">
+              <tr title="juego.html" class="tr-click">
                 <td><img src="images/4linea.png" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">4 en linea</span>
                     <br>
@@ -217,7 +219,7 @@
                 </td>
                 <td><span class="preciotabla">$20</span></td>
               </tr>
-              <tr title="index.html" class="tr-click">
+              <tr title="juego.html" class="tr-click">
                 <td><img src="images/mortalkombat.jpg" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">Mortal Kombat X</span>
                     <br>
@@ -229,7 +231,7 @@
                 </td>
                 <td><span class="preciotabla">$250</span></td>
               </tr>
-              <tr title="index.html" class="tr-click">
+              <tr title="juego.html" class="tr-click">
                 <td><img src="images/dragonball.jpg" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">Dragon Ball Xenoverse</span>
                     <br>
@@ -240,7 +242,7 @@
                 </td>
                 <td><span class="preciotabla">$200</span></td>
               </tr>
-              <tr title="index.html" class="tr-click">
+              <tr title="juego.html" class="tr-click">
                 <td><img src="images/carrerita.png" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">Carrerita</span>
                     <br>
@@ -251,7 +253,7 @@
                 </td>
                 <td><span class="preciotabla">$200</span></td>
               </tr>
-              <tr title="index.html" class="tr-click">
+              <tr title="juego.html" class="tr-click">
                 <td><img src="images/tiros.png" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">World War 3</span>
                     <br>
@@ -270,7 +272,7 @@
           <p class="titulares">Ultimos añadidos</p>
           <table class="table table-dark tabla-juegos">
             <tbody>
-              <tr class="tr-click" title="index.html">
+              <tr class="tr-click" title="juego.html">
                 <td><img src="images/carrerita.png" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">Carrerita</span>
                     <br>
@@ -281,7 +283,7 @@
                 </td>
                 <td><span class="preciotabla">$200</span></td>
               </tr>
-              <tr class="tr-click" title="index.html">
+              <tr class="tr-click" title="juego.html">
                 <td><img src="images/crazytaxi.jpg" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">Crazy taxi</span>
                     <br>
@@ -292,7 +294,7 @@
                 </td>
                 <td><span class="preciotabla">$100</span></td>
               </tr>
-              <tr class="tr-click" title="index.html">
+              <tr class="tr-click" title="juego.html">
                 <td><img src="images/pacman.png" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">Pacman</span>
                     <br>
@@ -303,7 +305,7 @@
                 </td>
                 <td><span class="preciotabla">$30</span></td>
               </tr>
-              <tr class="tr-click" title="index.html">
+              <tr class="tr-click" title="juego.html">
                 <td><img src="images/mortalkombat.jpg" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">Mortal Kombat X</span>
                     <br>
@@ -314,7 +316,7 @@
                 </td>
                 <td><span class="preciotabla">$250</span></td>
               </tr>
-              <tr title="index.html" class="tr-click">
+              <tr title="juego.html" class="tr-click">
                 <td><img src="images/tiros.png" class="img-tabla" alt=""></td>
                 <td><span class="titulojuego-tabla">World War 3</span>
                     <br>

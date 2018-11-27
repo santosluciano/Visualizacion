@@ -2,6 +2,9 @@ body{
   background-color: #0b2545;
   font-family: 'Source Sans Pro', sans-serif;
 }
+.construccion{
+  background-image: url(../images/paginaconstruccion.jpg);
+}
 nav.navbar{
   background-color: #212121;
 }
@@ -217,10 +220,6 @@ footer{
 .grupo-juegos{
   margin-top: 40px;
 }
-.contenedor-juego{
-  margin-bottom: 40px;
-  margin-right: 20px;
-}
 .form-check{
   color: white;
   margin-left: 25px;
@@ -248,10 +247,61 @@ footer{
 }
 @keyframes mostrar-item-jugados{
   0%{
-    transform: rotateY(45deg);
+    transform: rotateY(90deg);
   }
   100%{
     transform: rotateY(0deg);
     opacity: 1;
   }
+}
+.contenedor-juego{
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+.contenedor-juego img:hover{
+  cursor: pointer;
+}
+.contenedor-juego img:hover{
+  box-shadow: 0 0 20px yellow;
+}
+.contenedor-juego.animacion{
+  animation: mostrar-contenedor-juego 2s;
+  animation-fill-mode: none;
+}
+@keyframes mostrar-contenedor-juego{
+  from{
+    transform: translate(0,800px);
+  }
+  to{
+    transform: translate(0,0); 
+  }
+}
+.iconcheck{
+  margin-top:4px;
+  color:white;
+  display: none;
+}
+.iconcheck.active{
+  display: inline;
+}
+.iconcheck:hover{
+  color: lightblue;
+  cursor: pointer;
+}
+.img-recomendado:hover{
+  box-shadow: 0 0 20px yellow;
+  cursor: pointer;
+}
+.error-input{
+  box-shadow: 0 0 20px red;
+}
+.alerta-login{
+  color: red;
+  display: none;
+}
+.alerta-login.active{
+  display: inline;
+}
+.login-loading{
+  margin-left: 80px;
 }

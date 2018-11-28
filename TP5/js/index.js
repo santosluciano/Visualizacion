@@ -68,6 +68,7 @@ $(document).ready(function () {
     let label = $(this).find('a').attr("aria-label");
     if (label == 'Next'){
       if ($('.page-item.active').next('li').find('a').attr("aria-label")!='Next'){
+        cargarJuegos();
         $('.page-item.active').next('li').addClass('prox-active');
         $('.page-item').removeClass('active');
         $('.prox-active').addClass('active');
@@ -75,6 +76,7 @@ $(document).ready(function () {
       }
     } else if (label =='Previous'){
       if ($('.page-item.active').prev('li').find('a').attr("aria-label")!='Previous'){
+        cargarJuegos();
         $('.page-item.active').prev('li').addClass('prox-active');
         $('.page-item').removeClass('active');
         $('.prox-active').addClass('active');
@@ -82,6 +84,7 @@ $(document).ready(function () {
       }
     } 
     else{
+      cargarJuegos();
       $('.page-item').removeClass('active');
       $(this).addClass('active');
     }

@@ -395,3 +395,12 @@ footer{
     color: white;
   }
 }
+.etiquetafiltro{
+  color: white;
+  background-color: #212121;
+  padding: 6px;
+  border-radius: 10px;
+}
+.cancel:hover{
+  cursor: pointer;
+}

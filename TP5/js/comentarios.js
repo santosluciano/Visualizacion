@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    let i = 0;
+    let i = 30;
     getComentarios();
     function getComentarios() {
         fetch('https://jsonplaceholder.typicode.com/comments')
@@ -11,7 +11,7 @@ $(document).ready(function(){
     function mostrarComentarios(json) {
       $(".contenedor-comentarios").html("");
       let html = '';
-      for (i; i <3; i++) {
+      for (i; i <33; i++) {
         html += '<div class="container"><div class="media comment-box"><div class="media-left">';
         html += '<img class="img-responsive user-photo" src="images/usuario.png"></div><div class="media-body">'              
         html += '<h4 class="media-heading">'+json[i].email+'<span class="fas fa-heart corazon animacion-dislike">'+calcularLikes()+'</span></h4>';

@@ -46,7 +46,7 @@ $(document).ready(function () {
     window.location = 'todoslosjuegos.html';
   });
   //cancela el autodeslizante del carousel
-  $('.carousel.slide').carousel({ interval: false }); 
+  $('.carousel-recomendado').carousel({ interval: false }); 
   $('.flecha-infinito').on('click',function(){
     $('.item-infinito.active').addClass('stand');
     $('.item-infinito.active').removeClass('active');

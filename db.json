@@ -1,14 +1,100 @@
-{
+{    
     "comentarios": [
       {
         "id": 1,
-        "body": "some comment",
-        "postId": 1
+        "comentario": "No me gana nadie a este juego, soy el mejor #carrerita #invicto #champion",
+        "usuario": "Mark1",
+        "likes": 24
       },
       {
         "id": 2,
-        "body": "some comment",
-        "postId": 1
+        "comentario": "Que buen juego, no puedo parar de jugarlo #carrerita #vicio",
+        "usuario": "BirdLarry",
+        "likes": 32
+      },
+      {
+        "id": 3,
+        "comentario": "Es muy adictivo, cada dia rompo mi propio record #carrerita #crack",
+        "usuario": "Hijodelviento",
+        "likes": 61
+      },
+      {
+        "id": 4,
+        "comentario": "No puedo pasar los 1000 puntos #carrerita #imposible #dificil",
+        "usuario": "Ludueña",
+        "likes": 25
+      },
+      {
+        "id": 5,
+        "comentario": "El juego esta bueno pero le falta dificultad #carrerita #muyfacil",
+        "usuario": "FelipeOK",
+        "likes": 5
+      },
+      {
+        "id": 6,
+        "comentario": "#carrerita Amo este juego, es muy adictivo",
+        "usuario": "cuervotinelli",
+        "likes": 19
+      },
+      {
+        "id": 7,
+        "comentario": "Vamos a ver si mis amigos pasan mi record #carrerita",
+        "usuario": "Bipolardo",
+        "likes": 6
+      },
+      {
+        "id": 8,
+        "comentario": "Me gusta mucho el juego. Me gustaria que fuera multijugador #carrerita",
+        "usuario": "NeedForSpeedOK",
+        "likes": 84
+      },
+      {
+        "id": 9,
+        "comentario": "A alguien mas le parece aburrido este juego? #carrerita #aburrido",
+        "usuario": "VarskySport",
+        "likes": 38
+      },
+      {
+        "id": 10,
+        "comentario": "Se me acaba la gasolina tan pronto, no le agarro la mano #carrerita #singasolina #tortuga",
+        "usuario": "TC2000",
+        "likes": 24
+      },
+      {
+        "id": 11,
+        "comentario": "Hoy creo que fue mi mejor perfomance #carrerita",
+        "usuario": "TangalangaOK",
+        "likes": 12
+      },
+      {
+        "id": 12,
+        "comentario": "No me gusta para nada el juego, malos graficos y dificultad muy facil #carrerita",
+        "usuario": "AyrtonSenna",
+        "likes": 17
+      },
+      {
+        "id": 13,
+        "comentario": "El juego no vale lo que se paga #carrerita #estafa",
+        "usuario": 1,
+        "likes": 20
+      },
+      {
+        "id": 14,
+        "comentario": "Me hace acordar a mi niñez. El juego es fantastico #carrerita #abuelo",
+        "usuario": "LoloOK",
+        "likes": 14
+      },
+      {
+        "id": 15,
+        "comentario": "Buen juego, pero muy facil, faltan mas autos #carrerita #pocosautos",
+        "usuario": "HumodePrimera",
+        "likes": 13
+      },
+      {
+        "id": 16,
+        "comentario": "Creo que ya corri 100000 veces y no me canso #carrerita #vicio #latengoclara",
+        "usuario": "ElKaiser",
+        "likes": 33
       }
     ]
   }

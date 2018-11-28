@@ -1,8 +1,8 @@
 $(document).ready(function(){
-    let i = 40;
+    let i = 0;
     getComentarios();
     function getComentarios() {
-        fetch('https://jsonplaceholder.typicode.com/comments')
+        fetch('https://my-json-server.typicode.com/santosluciano/Visualizacion/comentarios')
         .then(response => response.json())
         .then(function (json) {
             mostrarComentarios(json);
@@ -11,29 +11,29 @@ $(document).ready(function(){
     function mostrarComentarios(json) {
       $(".contenedor-comentarios").html("");
       let html = '';
-      for (i; i <43; i++) {
+      for (i; i <3; i++) {
         html += '<div class="container contenedor-comentario"><div class="media comment-box"><div class="media-left">';
         html += '<img class="img-responsive user-photo" src="images/usuario.png"></div><div class="media-body">'              
-        html += '<h4 class="media-heading">'+json[i].email+'<span class="fas fa-heart corazon animacion-dislike">'+calcularLikes()+'</span></h4>';
-        html += '<p>'+json[i].body+'</p>';                               
+        html += '<h4 class="media-heading">'+json[i].usuario+'<span class="fas fa-heart corazon animacion-dislike">'+json[i].likes+'</span></h4>';
+        html += '<p>'+json[i].comentario+'</p>';                               
         html += '</div></div></div>';    
       }
       let comHTML = $(html);
       $(".contenedor-comentarios").html('').append(comHTML); 
       let intervalo = setInterval(() => {
         mostrarNuevoComentario(json);
-        if (i==400){
+        if (i==16){
             clearInterval(intervalo);
         }
-       },3000);
+       },4000);
     }
     function mostrarNuevoComentario(json){
         $('.contenedor-comentario').last().remove();
         let html = '';
         html += '<div class="container contenedor-comentario"><div class="media comment-box"><div class="media-left">';
         html += '<img class="img-responsive user-photo" src="images/usuario.png"></div><div class="media-body">'              
-        html += '<h4 class="media-heading">'+json[i].email+'<span class="fas fa-heart corazon animacion-dislike">'+calcularLikes()+'</span></h4>';
-        html += '<p>'+json[i].body+'</p>';                               
+        html += '<h4 class="media-heading">'+json[i].usuario+'<span class="fas fa-heart corazon animacion-dislike">'+json[i].likes+'</span></h4>';
+        html += '<p>'+json[i].comentario+'</p>';                               
         html += '</div></div></div>';   
         i++;
         $(".contenedor-comentarios").prepend(html); 
@@ -52,7 +52,4 @@ $(document).ready(function(){
         mg = parseInt(mg);
         $(this).html(mg-1);
     });    
-    function calcularLikes(){
-        return Math.floor(Math.random() * (99 - 0)) + 0;
-    }
 });

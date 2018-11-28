@@ -242,7 +242,7 @@ footer{
     animation-fill-mode: forwards;
 }
 .contenedor-comentario{
-  animation: mostrar-item 2s;
+  animation: mostrar-item 2.5s;
   animation-fill-mode: forwards;
 }
 @keyframes mostrar-item{

@@ -11,7 +11,7 @@ $(document).ready(function(){
     function mostrarComentarios(json) {
       $(".contenedor-comentarios").html("");
       let html = '';
-      for (i; i <3; i++) {
+      for (i; i <4; i++) {
         html += '<div class="container contenedor-comentario"><div class="media comment-box"><div class="media-left">';
         html += '<img class="img-responsive user-photo" src="images/usuario.png"></div><div class="media-body">'              
         html += '<h4 class="media-heading">'+json[i].usuario+'<span class="fas fa-heart corazon animacion-dislike">'+json[i].likes+'</span></h4>';

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mundo juegos - Carrerita</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/principal.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="index-log.html">MUNDO JUEGOS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto" style="margin-left:25%">
+          <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" style="margin-left:20px;" placeholder="Search" aria-label="Search">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="todoslosjuegos.html"><i class="fas fa-search"></i></a>
+          </div>
+        </ul>
+        <ul class="navbar-nav">
+          <img src="images/nopic.jpg" alt="">
+            <li class="nav-item dropdown" style="margin-left: 15px;margin-right:10px;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cosme Fulanito
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="seccion.html">Perfil</a>
+                <a class="dropdown-item" href="seccion.html">Mis juegos</a>
+                <a class="dropdown-item" href="seccion.html">Preferencias</a>
+                <a class="dropdown-item" href="seccion.html">Ayuda</a>
+                <a class="dropdown-item" href="index.html">Cerrar Sesion</a>
+              </div>
+            </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto activo">
+          <li class="nav-item">
+            <a class="nav-link" href="index-log.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle dropdown-juegos active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Juegos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="todoslosjuegos.html">Free to play</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="todoslosjuegos.html">Accion</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Arcade</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Carreras</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Deportes</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Rpg</a>
+              <a class="dropdown-item" href="todoslosjuegos.html">Shooter</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mis juegos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Juegos</li>
+      </ol>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <span class="etiquetafiltro">$0 a $900&nbsp;&nbsp;&nbsp;<i class="fas fa-times cancel"></i></span>
+          <p style="color:white;margin-top:15px;">Genero</p>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Free to play
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Accion
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Arcade
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Carreras
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Deportes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Rpg
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Shooter
+            </label>
+          </div>
+          <p style="color:white;margin-top:15px;">Precio</p>
+          <div class="row filter">
+            <div class="col-3">
+              <input type="text" style="font-size: 14px;" class="form-control filter-input min" placeholder="Min">
+            </div>
+            <div class="col-3">
+              <input type="text" class="form-control filter-input max" style="font-size: 14px;" placeholder="Max">
+            </div>
+            <i class="fas fa-check fa-2x iconcheck"></i>
+          </div>
+          <p style="color:white;margin-top:20px;">Edad</p>
+          <div class="row filter">
+            <div class="col-3">
+              <input type="text" class="form-control filter-input" style="font-size: 14px;" placeholder="Min">
+            </div>
+            <div class="col-3">
+              <input type="text" class="form-control filter-input" style="font-size: 14px;" placeholder="Max">
+            </div>
+            <i class="fas fa-check fa-2x iconcheck active"></i>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="offset-7">
+              <div class="dropdown">
+                  <span class="orderby">Ordenar por&nbsp;&nbsp;</span>
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownFiltro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Seleccionar..
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownFiltro">
+                    <a class="dropdown-item order" href="#">A-Z</a>
+                    <a class="dropdown-item order" href="#">Z-A</a>
+                    <a class="dropdown-item order" href="#">Mayor precio</a>
+                    <a class="dropdown-item order" href="#">Menor precio</a>
+                    <a class="dropdown-item order" href="#">Mejor valorado</a>
+                    <a class="dropdown-item order" href="#">Mas descargado</a>
+                    <a class="dropdown-item order" href="#">Ultimos añadidos</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="row grupo-juegos">
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/carrerita2.png" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">Carrerita</p>
+                    <span class="precio-juego">$200</span>
+                  </div>
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/tiros.png" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">World War 3</p>
+                    <span class="precio-juego">$400</span>
+                  </div>
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/4linea.png" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">4 en linea</p>
+                    <span class="precio-juego">$20</span>
+                  </div>
+              </div>
+              <div class="offset-2">
+
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/mordor.jpg" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">Mordor</p>
+                    <span class="precio-juego">$500</span>
+                  </div>
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/fifa.jpg" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">FIFA 19</p>
+                    <span class="precio-juego">$800</span>
+                  </div>
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/fortnite2.jpg" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">Fortnite</p>
+                    <span class="precio-juego">Free</span>
+                  </div>
+              </div>
+              <div class="offset-2">
+
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/diablo.jpg" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">Diablo 3</p>
+                    <span class="precio-juego">$400</span>
+                  </div>
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/doom.jpg" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">DOOM</p>
+                    <span class="precio-juego">$300</span>
+                  </div>
+              </div>
+              <div class="col-3 contenedor-juego animacion">
+                  <img src="images/lineage.jpg" class="img-fluid rounded" alt="Responsive image">
+                  <div class="info-juego rounded">
+                    <p class="etiqueta-juego">Lineage 2</p>
+                    <span class="precio-juego">Free</span>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="offset-3">
+                  <nav aria-label="Page navigation example" class="nav-pagination">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>      
+              </div>    
+          </div>
+         </div>
+      </div>
+    </div>
+    <footer class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="index-log.html">MUNDO JUEGOS</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto" style="margin-left:40%">
+          <div>
+            <a class="fab fa-facebook fa-3x redes" target="_blank" href="https://www.facebook.com/"></a>
+            <a class="fab fa-twitter-square fa-3x redes" target="_blank" style="margin-left:20px;" href="https://twitter.com/"></a>
+            <a class="fab fa-instagram fa-3x redes" target="_blank" style="margin-left:20px;" href="https://www.instagram.com/"></a>
+          </div>
+        </ul>
+      </div>
+      <p class="derechos">© MUNDO JUEGOS S.L. 2017-2018</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

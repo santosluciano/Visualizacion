@@ -1,0 +1,209 @@
+body{
+  background-color: #0b2545;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#juego{
+  background-color: black;
+  position: absolute;
+  border-radius: 10px;
+  left:35px;
+  width: 840px;
+  height: 550px;
+  background-image: url("../images/pista1.png");
+  background-size:auto,auto;
+  background-repeat: repeat,repeat;
+  background-position: 0px 0px;
+}
+.dashboard{
+  background-color: #212121;
+}
+.animacion-fondo {
+    animation: parallax-background linear 1s infinite;
+}
+.card{
+  height:550px;
+}
+@keyframes parallax-background {
+    from {
+        background-position: 0px 0px;
+    }
+
+    to {
+        background-position: 0px 650px;
+    }
+}
+/*auto*/
+#automovil {
+    position: absolute;
+    width: 50px;
+    height: 101px;
+    background-image: url("../images/auto.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    bottom: 30px;
+    left: 330px;
+}
+
+.izquierda {
+    animation: mover-izquierda ease-out 0.01s;
+    animation-fill-mode: forwards;
+}
+
+.derecha {
+    animation: mover-derecha ease-out 0.01s;
+    animation-fill-mode: forwards;
+}
+
+#alerta{
+  position: absolute;
+  bottom:300px;
+  left: 280px;
+  font-size: 50px;
+  color: red;
+  animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#rival,#gasolina{
+  position: absolute;
+  width: 48px;
+  height: 101px;
+  background-image: url("../images/rival.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  bottom: 800px;
+  left: 330px;
+}
+#gasolina{
+  width: 80px;
+  height: 71px;
+  background-image: url("../images/gasolina.png");
+}
+
+#automovil.explosion{
+  width: 90px;
+  height: 96px;
+  position: absolute;
+  background: url("../images/explosion.png") 0 0;
+  animation: explotar 1s steps(10);
+}
+
+@keyframes explotar {
+    100% {
+        background-position: -1000px 0;
+    }
+}
+
+.mover-rival{
+  animation: mover-objeto ease-out 5s;
+}
+
+.mover-gasolina{
+  bottom: 800px;
+  left: 330px;
+  animation: mover-objeto2 ease-out 2s;
+}
+
+@keyframes mover-objeto {
+  from {
+    bottom: 460px;
+  }
+  to {
+    bottom: -75px;
+  }
+}
+
+@keyframes mover-objeto2 {
+  from {
+    bottom: 460px;
+  }
+  to {
+    bottom: -10px;
+  }
+}
+
+@keyframes mover-izquierda {
+  25%{
+    transform: rotate(-5deg)
+  }
+  50%{
+    transform: rotate(-10deg)
+  }
+  75%{
+    transform: rotate(-15deg)
+  }
+  100%{
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes mover-derecha {
+  25%{
+    transform: rotate(5deg)
+  }
+  50%{
+    transform: rotate(10deg)
+  }
+  75%{
+    transform: rotate(15deg)
+  }
+  100%{
+    transform: rotate(20deg)
+  }
+}
+
+.dropdown-item:hover{
+  color: white;
+}
+.breadcrumb-a{
+  color: white;
+}
+.breadcrumb-a:hover {
+  color: grey;
+}
+/*CSS Pagina*/
+nav.navbar{
+  background-color: #212121;
+}
+footer{
+  background-color: #212121;
+  height: 100px;
+  margin-top: 40px;
+}
+.dropdown-item:hover{
+  background-color: #212121;
+  color:white;
+}
+.redes{
+  color: white;
+}
+.redes:hover{
+  color: grey;
+}
+.login{
+  margin-top:10px;
+  margin-left:38px;
+}
+.navbar-brand{
+  font-size:24px;
+}
+.derechos{
+  color:white;
+  margin-top:10px;
+}
+.dropdown-juegos:hover{
+  cursor: pointer;
+}
+
+

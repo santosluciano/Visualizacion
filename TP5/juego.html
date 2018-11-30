@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mundo juegos - Carrerita</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/principal.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="index-log.html">MUNDO JUEGOS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto" style="margin-left:25%">
+          <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" style="margin-left:20px;" placeholder="Search" aria-label="Search">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="juegos.html"><i class="fas fa-search"></i></a>
+          </div>
+        </ul>
+        <ul class="navbar-nav">
+          <img src="images/nopic.jpg" alt="">
+            <li class="nav-item dropdown" style="margin-left: 15px;margin-right:10px;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Cosme Fulanito
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="seccion.html">Perfil</a>
+                <a class="dropdown-item" href="seccion.html">Mis juegos</a>
+                <a class="dropdown-item" href="seccion.html">Preferencias</a>
+                <a class="dropdown-item" href="seccion.html">Ayuda</a>
+                <a class="dropdown-item" href="index.html">Cerrar Sesion</a>
+              </div>
+            </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto activo">
+          <li class="nav-item">
+            <a class="nav-link" href="index-log.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle dropdown-juegos active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Juegos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="todoslosjuegos.html">Free to play</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="todoslosjuegos.html">Accion</a>
+                <a class="dropdown-item" href="todoslosjuegos.html">Arcade</a>
+                <a class="dropdown-item" href="todoslosjuegos.html">Carreras</a>
+                <a class="dropdown-item" href="todoslosjuegos.html">Deportes</a>
+                <a class="dropdown-item" href="todoslosjuegos.html">Rpg</a>
+                <a class="dropdown-item" href="todoslosjuegos.html">Shooter</a>
+              </div>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="seccion.html">Mis juegos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="breadcrumb-a" href="seccion.html">Inicio</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb-a" href="seccion.html">Juegos</a></li>
+        <li class="breadcrumb-item"><a class="breadcrumb-a" href="seccion.html">Carreras</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Carrerita</li>
+      </ol>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-1 col-6">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="images/carrerita.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="images/carrerita2.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="images/carrerita3.png" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="z-index:2">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="z-index:2">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-4 columnaResumen">
+          <p class="titular-juego">Carrerita</p>
+        Juego apasionante de carreras. Llevara tu diversion y competitividad al maximo. Supera a tus rivales, pero cuidado, no te quedes sin combustible. Para eso aprovecha las ayudas que te da el juego para llegar al final de la carrera y se el jugador con mayor puntaje de la historia!!
+        <div class="valoracion">Valoracion <i class="fas fa-star" style="margin-left:15px"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star" style="margin-right:7px"></i>(5)</div>
+        <a class="btn btn-primary btn-accionjuego" href="https://santosluciano.github.io/Visualizacion/TP4/">JUGAR</a>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-1 col-5">
+          <div class="ranking">
+              <p class="titulosecundario">Ranking</p>
+              <table class="table table-hover table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Jugador</th>
+                      <th scope="col">Puntaje</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>8000</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>7980</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry the Bird</td>
+                      <td>7750</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>Valentino Rossi</td>
+                      <td>7720</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>Marcos Di Palma</td>
+                      <td>7420</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>Eber Ludueña</td>
+                      <td>7400</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7</th>
+                      <td>Juan Manuel Fangio</td>
+                      <td>7100</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8</th>
+                      <td>Ayrtor Senna</td>
+                      <td>6850</td>
+                      </tr>
+                    <tr>
+                      <th scope="row">9</th>
+                      <td>Felipe Mazza</td>
+                      <td>6500</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">10</th>
+                      <td>Lolo Reutemann</td>
+                      <td>6320</td>
+                    </tr>
+                  </tbody>
+                </table>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="comentarios">
+              <p class="titulosecundario">Ultimos comentarios</p>
+              <div class="contenedor-comentarios">     
+                  <i class="fas fa-circle-notch fa-spin fa-2x" style="color:white;margin-left:240px;"></i>      
+              </div>
+          </div>      
+        </div>
+      </div>
+    </div>  
+    <footer class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="index-log.html">MUNDO JUEGOS</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto" style="margin-left:40%">
+          <div>
+            <a class="fab fa-facebook fa-3x redes" target="_blank" href="https://www.facebook.com/"></a>
+            <a class="fab fa-twitter-square fa-3x redes" target="_blank" style="margin-left:20px;" href="https://twitter.com/"></a>
+            <a class="fab fa-instagram fa-3x redes" target="_blank" style="margin-left:20px;" href="https://www.instagram.com/"></a>
+          </div>
+        </ul>
+      </div>
+      <p class="derechos">© MUNDO JUEGOS S.L. 2017-2018</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/comentarios.js"></script>
+  </body>
+</html>
